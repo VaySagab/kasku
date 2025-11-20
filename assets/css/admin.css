@@ -1,0 +1,314 @@
+/* Kas Kelas Admin Theme */
+:root {
+    --kas-primary: #2563eb;
+    --kas-secondary: #64748b;
+    --kas-success: #16a34a;
+    --kas-danger: #dc2626;
+    --kas-warning: #d97706;
+    --kas-info: #0891b2;
+    --kas-light: #f1f5f9;
+    --kas-dark: #0f172a;
+    --kas-border: #e2e8f0;
+    --kas-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --kas-radius: 0.75rem;
+}
+
+/* Global Admin Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--kas-light);
+    color: var(--kas-dark);
+}
+
+/* Navbar Styles */
+.kas-navbar {
+    background: linear-gradient(to right, var(--kas-dark), #1e293b);
+    box-shadow: var(--kas-shadow);
+    padding: 1rem 0;
+}
+
+.kas-navbar .navbar-brand {
+    font-weight: 700;
+    color: #fff !important;
+    font-size: 1.5rem;
+}
+
+.kas-navbar .nav-link {
+    color: rgba(255,255,255,.85) !important;
+    font-weight: 500;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--kas-radius);
+    transition: all 0.3s ease;
+}
+
+.kas-navbar .nav-link:hover,
+.kas-navbar .nav-link.active {
+    color: #fff !important;
+    background: rgba(255,255,255,.1);
+}
+
+/* Card Styles */
+.kas-card {
+    background: #fff;
+    border: none;
+    border-radius: var(--kas-radius);
+    box-shadow: var(--kas-shadow);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.kas-card .card-header {
+    background: var(--kas-dark);
+    color: #fff;
+    border: none;
+    border-radius: var(--kas-radius) var(--kas-radius) 0 0;
+    padding: 1.25rem;
+}
+
+.kas-card .card-body {
+    padding: 1.5rem;
+}
+
+/* Table Styles */
+.kas-table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.kas-table th {
+    background: var(--kas-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: var(--kas-secondary);
+    padding: 1rem;
+    border-bottom: 2px solid var(--kas-border);
+}
+
+.kas-table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--kas-border);
+}
+
+.kas-table tbody tr:hover {
+    background-color: var(--kas-light);
+}
+
+/* Button Styles */
+.kas-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--kas-radius);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.kas-btn:hover {
+    transform: translateY(-1px);
+}
+
+.kas-btn-primary {
+    background: var(--kas-primary);
+    border: none;
+    color: white !important;
+}
+
+.kas-btn-primary:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.kas-btn-danger {
+    background: var(--kas-danger);
+    border: none;
+    color: white !important;
+}
+
+.kas-btn-danger:hover {
+    background: #b91c1c;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+}
+
+/* Stats Card Styles */
+.kas-stats {
+    padding: 1.5rem;
+    border-radius: var(--kas-radius);
+    background: #fff;
+    box-shadow: var(--kas-shadow);
+    transition: all 0.3s ease;
+}
+
+.kas-stats:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.1);
+}
+
+.kas-stats-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.kas-stats-icon.income {
+    background: linear-gradient(135deg, var(--kas-success), #15803d);
+}
+
+.kas-stats-icon.expense {
+    background: linear-gradient(135deg, var(--kas-danger), #991b1b);
+}
+
+.kas-stats-icon.balance {
+    background: linear-gradient(135deg, var(--kas-primary), #1e40af);
+}
+
+.kas-stats-title {
+    color: var(--kas-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.kas-stats-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--kas-dark);
+    margin: 0;
+}
+
+/* Badge Styles */
+.kas-badge {
+    padding: 0.5em 1em;
+    border-radius: 2rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+.kas-badge-success {
+    background: rgba(22, 163, 74, 0.1);
+    color: var(--kas-success);
+}
+
+.kas-badge-danger {
+    background: rgba(220, 38, 38, 0.1);
+    color: var(--kas-danger);
+}
+
+/* Alert Styles */
+.kas-alert {
+    border-radius: var(--kas-radius);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+.kas-alert-success {
+    background: rgba(22, 163, 74, 0.1);
+    color: var(--kas-success);
+    border-left: 4px solid var(--kas-success);
+}
+
+.kas-alert-danger {
+    background: rgba(220, 38, 38, 0.1);
+    color: var(--kas-danger);
+    border-left: 4px solid var(--kas-danger);
+}
+
+/* Form Styles */
+.kas-form-control {
+    border: 1px solid var(--kas-border);
+    border-radius: var(--kas-radius);
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.kas-form-control:focus {
+    border-color: var(--kas-primary);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.kas-form-label {
+    font-weight: 500;
+    color: var(--kas-dark);
+    margin-bottom: 0.5rem;
+}
+
+/* Modal Styles */
+.kas-modal .modal-content {
+    border: none;
+    border-radius: var(--kas-radius);
+    box-shadow: var(--kas-shadow);
+}
+
+.kas-modal .modal-header {
+    background: var(--kas-dark);
+    color: #fff;
+    border: none;
+    border-radius: var(--kas-radius) var(--kas-radius) 0 0;
+    padding: 1.25rem;
+}
+
+.kas-modal .modal-body {
+    padding: 1.5rem;
+}
+
+.kas-modal .modal-footer {
+    border-top: 1px solid var(--kas-border);
+    padding: 1.25rem;
+}
+
+/* Loading Bar */
+.kas-loading-bar {
+    height: 3px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, transparent, var(--kas-primary), transparent);
+    z-index: 9999;
+    animation: loading 1.5s infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.kas-loading .kas-loading-bar {
+    opacity: 1;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .kas-navbar {
+        padding: 0.75rem 1rem;
+    }
+    
+    .kas-card {
+        margin-bottom: 1rem;
+    }
+    
+    .kas-table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .kas-stats {
+        margin-bottom: 1rem;
+    }
+}

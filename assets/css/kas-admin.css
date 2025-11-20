@@ -1,0 +1,276 @@
+/* Admin Dashboard Theme */
+:root {
+    --kas-primary: #0d6efd;
+    --kas-secondary: #6c757d;
+    --kas-success: #198754;
+    --kas-danger: #dc3545;
+    --kas-warning: #ffc107;
+    --kas-info: #0dcaf0;
+    --kas-dark: #212529;
+    --kas-light: #f8f9fa;
+}
+
+/* Global Admin Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f6fa;
+}
+
+/* Navbar Styles */
+.kas-navbar {
+    background-color: var(--kas-dark);
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.kas-navbar .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.kas-navbar .nav-link {
+    color: rgba(255,255,255,.85) !important;
+    padding: 0.75rem 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.kas-navbar .nav-link:hover,
+.kas-navbar .nav-link.active {
+    color: #fff !important;
+}
+
+.kas-navbar .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 3px;
+    background: var(--kas-primary);
+    border-radius: 3px 3px 0 0;
+}
+
+/* Card Styles */
+.kas-card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.kas-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+.kas-card .card-header {
+    background: var(--kas-primary);
+    color: white;
+    border: none;
+    padding: 1rem 1.25rem;
+}
+
+.kas-card .card-body {
+    padding: 1.5rem;
+}
+
+/* Table Styles */
+.kas-table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.kas-table thead th {
+    background: rgba(0,0,0,.02);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    padding: 1rem;
+    border-bottom: 2px solid rgba(0,0,0,.05);
+}
+
+.kas-table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+.kas-table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.kas-table tbody tr:hover {
+    background-color: rgba(0,0,0,.02);
+}
+
+/* Form Controls */
+.kas-form-control {
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.kas-form-control:focus {
+    border-color: var(--kas-primary);
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}
+
+.kas-form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.kas-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.kas-btn:hover {
+    transform: translateY(-2px);
+}
+
+.kas-btn-primary {
+    background: var(--kas-primary);
+    border: none;
+    color: white;
+}
+
+.kas-btn-primary:hover {
+    background: #0b5ed7;
+    box-shadow: 0 4px 12px rgba(13,110,253,.15);
+}
+
+/* Stats Cards */
+.kas-stats-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.kas-stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.kas-stats-card .stats-title {
+    color: var(--kas-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.kas-stats-card .stats-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Badges */
+.kas-badge {
+    padding: 0.5em 0.75em;
+    border-radius: 0.375rem;
+    font-weight: 500;
+}
+
+.kas-badge-success {
+    background: var(--kas-success);
+    color: white;
+}
+
+.kas-badge-danger {
+    background: var(--kas-danger);
+    color: white;
+}
+
+/* Alerts */
+.kas-alert {
+    border: none;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+}
+
+.kas-alert-success {
+    background: rgba(25,135,84,.1);
+    color: var(--kas-success);
+}
+
+.kas-alert-danger {
+    background: rgba(220,53,69,.1);
+    color: var(--kas-danger);
+}
+
+/* Modal */
+.kas-modal .modal-content {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.kas-modal .modal-header {
+    background: var(--kas-primary);
+    color: white;
+    border: none;
+    padding: 1.25rem;
+}
+
+.kas-modal .modal-body {
+    padding: 1.5rem;
+}
+
+.kas-modal .modal-footer {
+    padding: 1.25rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+/* Utilities */
+.kas-shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075) !important;
+}
+
+.kas-shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+}
+
+.kas-rounded {
+    border-radius: 0.75rem !important;
+}
+
+.kas-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background: rgba(0,0,0,.05);
+}
+
+/* Transitions */
+.kas-fade {
+    transition: all 0.3s ease !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .kas-navbar {
+        padding: 1rem;
+    }
+    
+    .kas-card {
+        margin-bottom: 1rem;
+    }
+    
+    .kas-table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}

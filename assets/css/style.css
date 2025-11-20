@@ -1,0 +1,182 @@
+/* -------------------------------------- */
+/* 0. GLOBAL STYLES */
+/* -------------------------------------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f193d; 
+}
+
+/* Navbar Style */
+.kas-navbar {
+    background-color: rgba(15, 25, 61, 0.5); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Bayangan lebih gelap */
+    backdrop-filter: blur(5px);
+}
+
+/* -------------------------------------- */
+/* 1. ANIMASI BACKGROUND GRADASI (1 TIPE WARNA: BIRU) */
+/* -------------------------------------- */
+.kas-hero-section {
+    min-height: 100vh;
+    padding-top: 56px;
+    background: transparent; /* background dihandle oleh canvas animasi JS */
+}
+
+/* Keyframes untuk pergerakan gradasi yang sangat smooth */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Efek shadow pada teks yang pas */
+.kas-text-shadow {
+    /* Bayangan lebih lembut dan menyebar agar teks menonjol tanpa terlihat kasar */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6); 
+}
+.kas-text-shadow-small {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Animasi teks hero muncul dari bawah */
+.kas-hero-section h1, .kas-hero-section p, .kas-hero-section a {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: kas-fadeup 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.kas-hero-section h1 { animation-delay: 0.2s; }
+.kas-hero-section p { animation-delay: 0.5s; }
+.kas-hero-section a.btn { animation-delay: 0.8s; }
+
+@keyframes kas-fadeup {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* -------------------------------------- */
+/* 2. ANIMASI TOMBOL SUPER SMOOTH DENGAN BAYANGAN PAS */
+/* -------------------------------------- */
+
+/* Tombol Utama (DAFTAR SEKARANG) */
+.kas-main-btn-animated {
+    /* Menggunakan warna aksen merah muda/magenta (seperti yang diminati sebelumnya) */
+    background-color: #ff1493; 
+    border-color: #ff1493;
+    color: white;
+    transition: all 0.35s cubic-bezier(0.17, 0.67, 0.83, 0.67); 
+    position: relative;
+    z-index: 1;
+    /* Bayangan default yang halus */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Efek animasi gelombang pada tombol utama */
+.kas-main-btn-animated::before {
+    content: '';
+    position: absolute;
+    left: -60%;
+    top: 0;
+    width: 220%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+    transform: skewX(-20deg);
+    transition: left 0.5s;
+    z-index: 0;
+    animation: kas-btnwave 2.5s linear infinite;
+}
+
+@keyframes kas-btnwave {
+    0% { left: -60%; }
+    100% { left: 100%; }
+}
+
+.kas-main-btn-animated span, .kas-main-btn-animated i {
+    position: relative;
+    z-index: 1;
+}
+
+/* Efek saat Hover: Mengangkat dan Bayangan Lebih Terang */
+.kas-main-btn-animated:hover {
+    color: white; 
+    background-color: #e6007e; 
+    border-color: #e6007e;
+    transform: translateY(-5px); 
+    /* Bayangan yang 'memancarkan' warna pink/magenta yang memanjakan mata */
+    box-shadow: 0 10px 25px rgba(255, 20, 147, 0.8); 
+    filter: brightness(1.08);
+}
+
+/* Tombol Sekunder (LOGIN ADMIN) */
+.kas-sec-btn-outline {
+    background-color: transparent;
+    border: 2px solid white; 
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.kas-sec-btn-outline:hover {
+    background-color: white; 
+    color: #145da0; 
+    transform: translateY(-2px);
+    /* Bayangan putih yang bersih saat hover */
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3); 
+    filter: brightness(1.08);
+}
+
+/* -------------------------------------- */
+/* 3. ANIMASI ILUSTRASI (Melayang Lembut) */
+/* -------------------------------------- */
+.kas-floating-element {
+    animation: float-animation 6s ease-in-out infinite;
+    /* Tambahkan bayangan ke ilustrasi agar terlihat 3D dan melayang */
+    filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.4));
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes float-animation {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-15px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+/* Animasi fitur muncul dari bawah */
+#features .col-md-4 {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: kas-fadeup 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+#features .col-md-4:nth-child(1) { animation-delay: 0.2s; }
+#features .col-md-4:nth-child(2) { animation-delay: 0.5s; }
+#features .col-md-4:nth-child(3) { animation-delay: 0.8s; }
+/* end animasi fitur */
+
+/* -------------------------------------- */
+/* 4. BADGES/PARTNER STRIP */
+/* -------------------------------------- */
+.kas-partner-strip {
+    background-color: rgba(0, 0, 0, 0.2); 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    position: relative; 
+    z-index: 10;
+}
+
+.kas-badge-icon, .kas-badge-value {
+    /* Warna aksen */
+    color: #ff1493; 
+}
