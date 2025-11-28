@@ -1,0 +1,58 @@
+[28-Nov-2025 14:13:16 UTC] === ADMIN_TRANSACTIONS.PHP STARTED ===
+[28-Nov-2025 14:13:16 UTC] Session Role: NOT SET
+[28-Nov-2025 14:13:16 UTC] Admin ID: NOT SET
+[28-Nov-2025 14:13:16 UTC] SQL Query Transactions: SELECT t.*, k.nama_kelas, k.id_kelas, kas.saldo
+        FROM transaksi t
+        JOIN kas ON t.id_kas = kas.id_kas
+        JOIN kelas k ON kas.id_kelas = k.id_kelas
+        WHERE k.id_admin = 1 ORDER BY t.tanggal DESC, t.created_at DESC
+[28-Nov-2025 14:13:16 UTC] getKasByKelas: id_kelas=15 -> id_kas=1
+[28-Nov-2025 14:13:42 UTC] === ADMIN_TRANSACTIONS.PHP STARTED ===
+[28-Nov-2025 14:13:42 UTC] Session Role: NOT SET
+[28-Nov-2025 14:13:42 UTC] Admin ID: NOT SET
+[28-Nov-2025 14:13:42 UTC] SQL Query Transactions: SELECT t.*, k.nama_kelas, k.id_kelas, kas.saldo
+        FROM transaksi t
+        JOIN kas ON t.id_kas = kas.id_kas
+        JOIN kelas k ON kas.id_kelas = k.id_kelas
+        WHERE k.id_admin = 1 ORDER BY t.tanggal DESC, t.created_at DESC
+[28-Nov-2025 14:13:42 UTC] getKasByKelas: id_kelas=15 -> id_kas=1
+[28-Nov-2025 14:13:45 UTC] === ADMIN_TRANSACTIONS.PHP STARTED ===
+[28-Nov-2025 14:13:45 UTC] Session Role: NOT SET
+[28-Nov-2025 14:13:45 UTC] Admin ID: NOT SET
+[28-Nov-2025 14:13:45 UTC] SQL Query Transactions: SELECT t.*, k.nama_kelas, k.id_kelas, kas.saldo
+        FROM transaksi t
+        JOIN kas ON t.id_kas = kas.id_kas
+        JOIN kelas k ON kas.id_kelas = k.id_kelas
+        WHERE k.id_admin = 1 ORDER BY t.tanggal DESC, t.created_at DESC
+[28-Nov-2025 14:13:45 UTC] getKasByKelas: id_kelas=15 -> id_kas=1
+[28-Nov-2025 14:13:54 UTC] === ADMIN_TRANSACTIONS.PHP STARTED ===
+[28-Nov-2025 14:13:54 UTC] Session Role: NOT SET
+[28-Nov-2025 14:13:54 UTC] Admin ID: NOT SET
+[28-Nov-2025 14:13:54 UTC] === PROSES HAPUS TRANSAKSI ===
+[28-Nov-2025 14:13:54 UTC] ID Transaksi: 32
+[28-Nov-2025 14:13:54 UTC] === ADMIN_TRANSACTIONS.PHP STARTED ===
+[28-Nov-2025 14:13:54 UTC] Session Role: NOT SET
+[28-Nov-2025 14:13:54 UTC] Admin ID: NOT SET
+[28-Nov-2025 14:13:54 UTC] SQL Query Transactions: SELECT t.*, k.nama_kelas, k.id_kelas, kas.saldo
+        FROM transaksi t
+        JOIN kas ON t.id_kas = kas.id_kas
+        JOIN kelas k ON kas.id_kelas = k.id_kelas
+        WHERE k.id_admin = 1 ORDER BY t.tanggal DESC, t.created_at DESC
+[28-Nov-2025 14:13:59 UTC] === ADMIN_TRANSACTIONS.PHP STARTED ===
+[28-Nov-2025 14:13:59 UTC] Session Role: NOT SET
+[28-Nov-2025 14:13:59 UTC] Admin ID: NOT SET
+[28-Nov-2025 14:13:59 UTC] SQL Query Transactions: SELECT t.*, k.nama_kelas, k.id_kelas, kas.saldo
+        FROM transaksi t
+        JOIN kas ON t.id_kas = kas.id_kas
+        JOIN kelas k ON kas.id_kelas = k.id_kelas
+        WHERE k.id_admin = 1 ORDER BY t.tanggal DESC, t.created_at DESC
+[28-Nov-2025 14:13:59 UTC] getKasByKelas: id_kelas=15 -> id_kas=1
+[28-Nov-2025 14:14:02 UTC] === ADMIN_TRANSACTIONS.PHP STARTED ===
+[28-Nov-2025 14:14:02 UTC] Session Role: NOT SET
+[28-Nov-2025 14:14:02 UTC] Admin ID: NOT SET
+[28-Nov-2025 14:14:02 UTC] SQL Query Transactions: SELECT t.*, k.nama_kelas, k.id_kelas, kas.saldo
+        FROM transaksi t
+        JOIN kas ON t.id_kas = kas.id_kas
+        JOIN kelas k ON kas.id_kelas = k.id_kelas
+        WHERE k.id_admin = 1 ORDER BY t.tanggal DESC, t.created_at DESC
+[28-Nov-2025 14:14:02 UTC] getKasByKelas: id_kelas=15 -> id_kas=1
